@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Accordian</title>
+    <link rel="stylesheet" href="css/accordian-style.css">
+</head>
+<body>
+    <h1>FAQ</h1>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                Apa yang di maksud dengan Web Development?
+            </div>
+            <div class="body">
+                <div class="body-content">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At culpa qui impedit quod labore ratione autem quis, expedita doloribus quas veritatis repudiandae iusto, deleniti dolore dolores assumenda amet! Sed delectus, sit repudiandae at amet illum, earum esse inventore beatae dolore nemo alias tenetur iusto velit quod laboriosam pariatur! Earum, illo.
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                Heyy, Apakabar denganmu?
+            </div>
+            <div class="body">
+                <div class="body-content">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At culpa qui impedit quod labore ratione autem quis, expedita doloribus quas veritatis repudiandae iusto, deleniti dolore dolores assumenda amet! Sed delectus, sit repudiandae at amet illum, earum esse inventore beatae dolore nemo alias tenetur iusto velit quod laboriosam pariatur! Earum, illo.
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                Heyy,, Apakah kamu merindukan aku?
+            </div>
+            <div class="body">
+                <div class="body-content">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At culpa qui impedit quod labore ratione autem quis, expedita doloribus quas veritatis repudiandae iusto, deleniti dolore dolores assumenda amet! Sed delectus, sit repudiandae at amet illum, earum esse inventore beatae dolore nemo alias tenetur iusto velit quod laboriosam pariatur! Earum, illo.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ItemHeaders = document.querySelectorAll(".header");
+
+        ItemHeaders.forEach(ItemHeader =>{
+            ItemHeader.addEventListener("click", event => {
+                ItemHeader.classList.toggle("active");
+
+                const ItemBody = ItemHeader.nextElementSibling;
+
+                if(ItemHeader.classList.contains("active")){
+                    ItemBody.style.maxHeight = ItemBody.scrollHeight + "px"   
+                }else{
+                    ItemBody.style.maxHeight = 0;
+                }
+            })
+        })
+    </script>
+</body>
+</html>
